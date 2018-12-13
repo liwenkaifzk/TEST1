@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+        *{
+            margin:0px;
+            padding:0px;              /*消除列表的各种样式*/
+            list-style-type:none;    /*去除ul列表前面（图标的关键）*/
+        }
+        body { margin:0; }
+
+        #box{
+            width:100%;
+            height:100%;
+            background-color: lightskyblue;
+            position:absolute;
+        }
+        #a1{
+             width:100%;
+             height:500px;
+             background-color:red;
+             position:absolute;
+
+         }
+            #myCarousel{
+                width:100%;
+                height:500px;
+                float:left;
+                margin-left:2px;
+                background:#F2F2F2;
+
+            }
+            /*滚动图片*/
+            #myCarousel img{
+                width:100%;
+                height:500px;
+            }
+            /*滚动面包小圆点样式*/
+            #myCarousel .active{
+                background:#FFF;
+            }
+
+
+        #a2{
+             width:100%;
+             height:50px;
+             font-size:20px;
+             font-weight: bold;
+             color:red;
+             /*background: azure;*/
+             position:absolute;
+             left:100px;
+            top:10px;
+         }
+            #img{
+                margin-left:100px;
+            }
+            #a2 ul{
+                float:right;
+                margin-right:20px;
+            }
+            #a2 ul li{
+                float:left;
+                margin-left:20px;
+        }
+
+            #a2 a{
+              color:white;
+            }
+
+            #a2 a:hover{
+                color:firebrick;
+            }
+        #a3{
+            width:250px;
+            height:200px;
+            position:absolute;
+            left:150px;
+            top:150px;
+            color:white;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+
+            function k1(e){
+                var a3 = document.getElementById("a3");
+                var str = "";
+                str +="<span style='font-size:30px;color:#FFFFFF;'>似懂非懂速度骚等</span> <br />";
+                str +="<span style='font-size:20px;color:#FFFFFF;'>sdfsdfssfdsdf</span> <br />";
+                str +="<button style='width:100px;height:30px;background: lightskyblue;'>按钮</button>";
+                a3.innerHTML=str;
+                // a3.innerText="<a>asdasd</a>";
+            }
+
+            function k2(e){
+                var a3 = document.getElementById("a3");
+                var str = "";
+                str +="<span style='font-size:30px;color:#FFFFFF;'>水电费等所发生的</span> <br />";
+                str +="<span style='font-size:20px;color:#FFFFFF;'>分公司的范德萨</span> <br />";
+                str +="<button style='width:100px;height:30px;background: lightskyblue;'>按钮</button>";
+                a3.innerHTML=str;
+                // a3.innerText="<a>asdasd</a>";
+            }
+            function k3(e){
+                var a3 = document.getElementById("a3");
+                var str = "";
+                str +="<span style='font-size:30px;color:#FFFFFF;'>按时打算发的</span> <br />";
+                str +="<span style='font-size:20px;color:#FFFFFF;'>的非官方大哥</span> <br />";
+                str +="<button style='width:100px;height:30px;background: lightskyblue;'>按钮</button>";
+                a3.innerHTML=str;
+                // a3.innerText="<a>asdasd</a>";
+            }
+
+            function k4(e){
+                var a3 = document.getElementById("a3");
+                var str = "";
+                str +="<span style='font-size:30px;color:red;'>爱仕达多大萨达</span> <br />";
+                str +="<span style='font-size:20px;color:red;'>奥术大师多</span> <br />";
+                str +="<button style='width:100px;height:30px;background: lightskyblue;'>按钮</button>";
+                a3.innerHTML=str;
+                // a3.innerText="<a>asdasd</a>";
+            }
+
+    </script>
+
+</head>
+<body>
+<div id="box">
+    <div id="a1">
+        <div id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target = '#myCarousel' data-slide-to = "0" class="active" onclick="k1(this);"></li>
+                <li data-target = '#myCarousel' data-slide-to = "1"  onclick="k2(this);"></li>
+                <li data-target = '#myCarousel' data-slide-to = "2" onclick="k3(this);"></li>
+                <li data-target = '#myCarousel' data-slide-to = "3" onclick="k4(this);"></li>
+            </ol>
+            <div class="carousel-inner" >
+                <div class="item active">
+                    <a href="#1wew">
+                        <img src="img/home_img_banner_illustration_1.png" alt="first slide" />
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#1wew">
+                        <img src="img/home_img_banner_illustration_2.png" alt="second slide" />
+                    </a>
+
+                </div>
+                <div class="item">
+                    <a href="#1wew">
+                        <img src="img/home_img_banner_illustration_3.png" alt="third slide" />
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="#1wew">
+                        <img src="img/home_img_banner_illustration_4.png" alt="third slide" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="a2">
+        <span id="img"> <img src="img/home_logo_bottom_cube.png" width="100px" height="48px"> </span>
+        <ul>
+            <a href="https://www.hao123.com/"> <li>首页</li></a>
+            <li>个人中心</li>
+            <li>奥术大师多</li>
+            <li>阿萨德</li>
+        </ul>
+    </div>
+
+    <div id="a3">
+        <span style='font-size:30px;color:#FFFFFF;'>似懂非懂速度骚等</span> <br />
+        <span style='font-size:20px;color:#FFFFFF;'>sdfsdfssfdsdf</span> <br />
+        <button style='width:100px;height:30px;background: lightskyblue;'>按钮</button>
+
+    </div>
+
+</div>
+
+</body>
+</html>
